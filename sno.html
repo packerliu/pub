@@ -76,37 +76,6 @@
 								</script>
 							</section>
 
-							<section data-markdown>
-								## Math using Katex
-
-								When $ a \ne 0 $, there are two solutions to $ ax^2 + bx + c = 0 $ and they are
-								$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
-							</section>
-							<section>
-								Code highlight
-							  <pre><code data-trim data-noescape>
-									(def lazy-fib
-										(concat
-											[0 1]
-											<mark>((fn rfib [a b]</mark>
-											(lazy-cons (+ a b) (rfib b (+ a b)))) 0 1)))
-										</code>
-								</pre>
-							</section>
-							<section>
-							  <pre><code data-trim>
-							  // Useless comment.
-							  alert('hi');
-							  </pre></code>
-							  <p class="fragment" data-code-focus="1">
-							    This focuses on the comment.
-							  </p>
-							  <p class="fragment" data-code-focus="1-2">
-							    Another fragment.
-							  </p>
-							</section>
-
-
             </div>
         </div>
 
@@ -123,7 +92,7 @@
 						history: true,
     				center: true,
 
-    				transition: 'fade', // none/fade/slide/convex/concave/zoom
+    				transition: 'convex', // none/fade/slide/convex/concave/zoom
 
 						// other options ...
 						//math: {
@@ -141,6 +110,13 @@
     					{ src: 'plugin/notes/notes.js', async: true },
 							//{ src: 'plugin/math/math.js', async: true },
 							{ src: 'plugin/math-katex/math-katex.js', async: true }
+							//{ src: '../highlight/src/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+							//{
+							//	src: 'node_modules/reveal-code-focus/reveal-code-focus.js', async: true,
+							//		callback: function() {
+							//			RevealCodeFocus();
+							//		}
+							//}
     				]
 
     			});
