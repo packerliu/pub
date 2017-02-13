@@ -65,7 +65,7 @@
 									## Drones at Ski Resorts
 
 									- AARA- Airborne Avalanche Rescue Assistant, Nov. 2011.
-										[![web](Internet.png)](https://wordlesstech.com/aara-airborne-avalanche-rescue-assistant/)
+										[web](https://wordlesstech.com/aara-airborne-avalanche-rescue-assistant/)
 									- Drones to the rescue of Avalanche Victims, July 2013.
 										[web](http://pistehors.com/drones-to-the-rescue-of-avalanche-victims-22883814.htm)
 									- Drones can save lives in search and rescue mission after avalanche, March 2015.
@@ -84,15 +84,51 @@
 										- First seven minutes, brain damage can occur
 										- Fifteen minutes, 30% are dead
 										- Thirty minutes, 90% are dead
-										==> After 30 minutes, you are not expected to be found alive.
+										******
+										- After 30 minutes, you are not expected to be found alive.
 								</script>
 							</section>
-							<section data-markdown>
-								<script type="text/template">
+							<section>
+								<section data-markdown>
+									<script type="text/template">
 										## Patents and Prior Arts
 
-										-
-								</script>
+										- Avalanche rescue device [details](#/4/1)
+										- Avalanche victim locating transceiving apparatus [details](#/4/2)
+										- a long [list...](https://www.google.com/patents/US8061293#backward-citations)
+									</script>
+								</section>
+								<section>
+									<h2>Avalanche rescue device
+									</h2>
+
+									<img src=https://patentimages.storage.googleapis.com/US8061293B2/US08061293-20111122-D00002.png
+									alt="fig.2" style="float:left;width:30%">
+									<p style="text-align:left;"><a href=https://www.google.com/patents/US8061293>US 8061293 B2</a>:
+										A rescue device includes a control module to sense an
+										avalanche,  sense the direction of the surface and establish
+										a target path  to the surface. A nozzle is selected or
+										oriented by the control module along the target path. A
+										fluid reservoir is connected to the nozzle to force a fluid
+										through the nozzle along the target path to the surface.
+										This allows rescuers to identify the location of a victim
+										and also provides an air path to the victim.
+									</p>
+								</section>
+								<section>
+									<h2>Avalanche victim locating transceiving apparatus</h2>
+									<img src=https://patentimages.storage.googleapis.com/pages/US6167249-1.png alt="fig.1" style="float:left;width:20%">
+									<p style="text-align:left;"><a href=https://www.google.com/patents/US6167249>US 6167249 A</a>:
+										A rescue transceiver apparatus for transmitting a signal to and receiving a
+										signal from another rescue transceiver apparatus is provided. The apparatus
+										comprises a housing and a radio signal transmitter ...
+										The apparatus further comprises a microcontroller for controlling the radio
+										signal transmitter and the receiver.
+									</p>
+								</section>
+								<section data-markdown>
+									## More...
+								</section>
 							</section>
 
             </div>
@@ -112,6 +148,74 @@
     				center: true,
 
     				transition: 'convex', // none/fade/slide/convex/concave/zoom
+						menu: {
+        			// Specifies which side of the presentation the menu will
+        			// be shown. Use 'left' or 'right'.
+        			side: 'left',
+
+			        // Add slide numbers to the titles in the slide list.
+			        // Use 'true' or format string (same as reveal.js slide numbers)
+			        numbers: true,
+
+			        // Specifies which slide elements will be used for generating
+			        // the slide titles in the menu. The default selects the first
+			        // heading element found in the slide, but you can specify any
+			        // valid css selector and the text from the first matching
+			        // element will be used.
+			        // Note: that a section data-menu-title attribute or an element
+			        // with a menu-title class will take precedence over this option
+			        titleSelector: 'h1, h2, h3, h4, h5, h6',
+
+			        // Hide slides from the menu that do not have a title.
+			        // Set to 'true' to only list slides with titles.
+			        hideMissingTitles: false,
+
+			        // Add markers to the slide titles to indicate the
+			        // progress through the presentation
+			        markers: true,
+
+			        // Specify custom panels to be included in the menu, by
+			        // providing an array of objects with 'title', 'icon'
+			        // properties, and either a 'src' or 'content' property.
+			        custom: //false,
+							[
+								//{ title: 'Demo', icon: '<i class="fa fa-external-link">', src: 'demo.html' },
+								{ title: 'About', icon: '<i class="fa fa-info">', content: '<p>This slidedeck is created for ...</p>' }
+							],
+
+			        // Specifies the themes that will be available in the themes
+			        // menu panel. Set to 'false' to hide themes panel.
+			        themes: [
+			            { name: 'Black', theme: 'css/theme/black.css' },
+			            { name: 'White', theme: 'css/theme/white.css' },
+			            { name: 'League', theme: 'css/theme/league.css' },
+			            { name: 'Sky', theme: 'css/theme/sky.css' },
+			            { name: 'Beige', theme: 'css/theme/beige.css' },
+			            { name: 'Simple', theme: 'css/theme/simple.css' },
+			            { name: 'Serif', theme: 'css/theme/serif.css' },
+			            { name: 'Blood', theme: 'css/theme/blood.css' },
+			            { name: 'Night', theme: 'css/theme/night.css' },
+			            { name: 'Moon', theme: 'css/theme/moon.css' },
+			            { name: 'Solarized', theme: 'css/theme/solarized.css' }
+			        ],
+
+			        // Specifies if the transitions menu panel will be shown.
+			        transitions: true,
+
+			        // Adds a menu button to the slides to open the menu panel.
+			        // Set to 'false' to hide the button.
+			        openButton: true,
+
+			        // If 'true' allows the slide number in the presentation to
+			        // open the menu panel. The reveal.js slideNumber option must
+			        // be displayed for this to take effect
+			        openSlideNumber: true,
+
+			        // If true allows the user to open and navigate the menu using
+			        // the keyboard. Standard keyboard interaction with reveal
+			        // will be disabled while the menu is open.
+			        keyboard: true
+			    	},
 
 						// other options ...
 						//math: {
@@ -127,6 +231,7 @@
     					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
     					{ src: 'plugin/zoom-js/zoom.js', async: true },
     					{ src: 'plugin/notes/notes.js', async: true },
+							{ src: 'node_modules/reveal.js-menu/menu.js' },
 							//{ src: 'plugin/math/math.js', async: true },
 							{ src: 'plugin/math-katex/math-katex.js', async: true }
 							//{ src: '../highlight/src/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
