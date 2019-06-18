@@ -22,11 +22,31 @@ Handler registration : choose 'ttn-handler-us-west'.
     - APPKEY:
 12. wiring difference between V1.2 and 1.1/1.0, https://www.thethingsnetwork.org/forum/t/big-lora32u4-boards-topic/15273
 
+13. Arduino Manual Bootloading to fix IDE issue, https://learn.adafruit.com/adafruit-feather-32u4-adalogger/using-with-arduino-ide
+
+14. Also adjust the clock tolerance to 10% instead of 1% at ```initfunc()``` with:
+```c
+// initial job
+static void initfunc (osjob_t* j) {
+  // reset MAC state
+  LMIC_reset();
+  LMIC_setClockError(MAX_CLOCK_ERROR * 10 / 100);
+  // start joining
+  LMIC_startJoining();
+  // init done - onEvent() callback will be invoked...
+}
+```
+
+15. LoRa32u4 II v1.2 is different pin at http://iotbyskovholm.dk/?q=content/lora32u4-ii-v12-development-board
+
 # RPi3+Dragino Lora HAT
 
 1. LoRa - Raspberry Pi - Single Channel Gateway - Cheap!, https://www.hackster.io/ChrisSamuelson/lora-raspberry-pi-single-channel-gateway-cheap-d57d36
 2. Make it a systemctl service, https://medium.com/@benmorel/creating-a-linux-service-with-systemd-611b5c8b91d6
 3. Enable these services, https://www.linode.com/docs/quick-answers/linux/start-service-at-boot/
+
 3. Good article to read/review LoRa, https://medium.com/coinmonks/lpwan-lora-lorawan-and-the-internet-of-things-aed7d5975d5d
-4. enable GPS +RPi3 at https://wiki.dragino.com/index.php?title=Getting_GPS_to_work_on_Raspberry_Pi_3_Model_B
+4. Enable GPS +RPi3 at https://wiki.dragino.com/index.php?title=Getting_GPS_to_work_on_Raspberry_Pi_3_Model_B
 5. Install Dual Channel forwarder, https://github.com/bokse001/dual_chan_pkt_fwd
+
+6. Dual-Chan Gateway with Raspberry PI3 + Dragino Hat v1.4 and Downstream messages, https://www.thethingsnetwork.org/forum/t/dual-chan-gateway-with-raspberry-pi3-dragino-hat-v1-4-and-downstream-messages/13284
